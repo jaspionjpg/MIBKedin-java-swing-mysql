@@ -1,0 +1,45 @@
+SQL MBKEDIN
+CREATE DATABASE bdmibkedin
+CREATE TABLE bdmibkedin.candidato(
+  id BIGINT(20) PRIMARY KEY AUTO_INCREMENT,
+  nome VARCHAR(150) NOT NULL,
+  email VARCHAR(150) NOT NULL,
+  descricao VARCHAR(150) NOT NULL,
+  cidade VARCHAR(150) NOT NULL,
+  endereco VARCHAR(150) NOT NULL,
+  telefone VARCHAR(150) NOT NULL,
+  dataNascimento VARCHAR(150) NOT NULL,
+  cargos VARCHAR(400) NOT NULL,
+  empresas VARCHAR(400) NOT NULL,
+  cursos VARCHAR(400) NOT NULL,
+  escolas VARCHAR(400) NOT NULL,
+  login VARCHAR(150) NOT NULL,
+  senha VARCHAR(150) NOT NULL
+)
+
+create table bdmibkedin.empresa(
+  id BIGINT(20) primary key auto_increment,
+  nome VARCHAR(150) not null,
+  setor VARCHAR(150) not null,
+  fundacao INT not null,
+  cidadeSede VARCHAR(150) not null,
+  telefone VARCHAR(150) not null,
+  site VARCHAR(150) not null,
+  endereco VARCHAR(150) not null,
+  tamanhoEmpresa VARCHAR(150) not null,
+  login VARCHAR(150) not null,
+  senha VARCHAR(150) not null,
+  descricao VARCHAR(150) not null
+  )
+
+create table bdmibkedin.vaga(
+  id BIGINT(20) primary key auto_increment,
+  idEmpresa VARCHAR(150) not null,
+  setor VARCHAR(150) not null,
+  cidade VARCHAR(150) not null,
+  descricao VARCHAR(150) not null,
+  dataCadastro VARCHAR(150) not null,
+  titulo VARCHAR(150) not null
+  )
+
+
